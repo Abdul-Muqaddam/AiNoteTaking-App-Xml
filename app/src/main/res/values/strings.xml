@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FirstXMLProjectAINotePad</string>
+    <string name="easy_notes">Easy Notes</string>
+    <string name="click_me">Click Me</string>
+    <string name="_continue">Continue</string>
+    <string name="language">Language</string>
+    <string name="search_languages">Search Languages</string>
+    <string name="english">English</string>
+    <string name="notepad">Notepad</string>
+    <string name="all">All</string>
+    <string name="work">Work</string>
+    <string name="office">Office</string>
+    <string name="shipping">Shipping</string>
+    <string name="shopping">Shopping</string>
+    <string name="add_your_first_note">Add your first note</string>
+    <string name="notes">Notes</string>
+    <string name="calender">Calender</string>
+    <string name="search">Search</string>
+    <string name="templates">Templates</string>
+
+</resources>
