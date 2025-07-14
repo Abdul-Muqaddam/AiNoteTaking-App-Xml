@@ -13,10 +13,12 @@
         android:theme="@style/Theme.FirstXMLProjectAINotePad"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.features.setting_activity.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.features.home_activity.HomeActivity"
             android:exported="false" />
         <activity android:name=".presentation.features.language_fragment.LanguageActivity" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
