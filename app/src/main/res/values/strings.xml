@@ -17,5 +17,7 @@
     <string name="calender">Calender</string>
     <string name="search">Search</string>
     <string name="templates">Templates</string>
+    <string name="activitysettingsbinding">ActivitySettingsBinding</string>
+    <string name="hellow_world">hellow world</string>
 
 </resources>
