@@ -19,5 +19,11 @@
     <string name="templates">Templates</string>
     <string name="activitysettingsbinding">ActivitySettingsBinding</string>
     <string name="hellow_world">hellow world</string>
+    <string name="more">More</string>
+    <string name="upgrade_premium">Upgrade Premium</string>
+    <string name="enjoy_free_ad_s_experience">Enjoy Free Ad\'s Experience</string>
+    <string name="general">General</string>
+    <string name="others">Others</string>
+    <string name="app_languages">App Languages</string>
 
 </resources>
