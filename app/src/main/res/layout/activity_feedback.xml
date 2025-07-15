@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.features.feedback_screen.Feedback_activity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="@dimen/_30sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/ic_back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_baseline_arrow_back"/>
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/feedback"
+        android:textAlignment="center"
+        android:textSize="@dimen/_22ssp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_select_the_type_of_feedback"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/shine_black33"
+        android:textStyle="bold"/>
+
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purpleF0"
+            android:text="@string/connection_problem"
+            android:textColor="@color/gray70"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purpleF0"
+            android:text="@string/app_not_working"
+            android:textColor="@color/gray70"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purpleF0"
+            android:text="@string/app_take_to_much_time_on_loading"
+            android:textColor="@color/gray70"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/purpleF0"
+            android:text="@string/suggest_your_favorite_apps_others"
+            android:textColor="@color/gray70"/>
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/description"
+     android:textSize="@dimen/_13ssp"
+     android:textColor="@color/shine_black33"
+     android:textStyle="bold"/>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:elevation="@dimen/_20sdp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_187sdp"
+            android:hint="@string/write_suggestion_here"
+            android:gravity="top"
+            android:padding="@dimen/_13ssp"
+            android:textColorHint="@color/gray70"/>
+
+    </androidx.cardview.widget.CardView>
+<Button
+    android:layout_margin="@dimen/_30sdp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_45sdp"
+    android:text="@string/submit"
+    android:textSize="@dimen/_15ssp"
+    android:backgroundTint="@color/purpleF0"/>
+
+
+
+</LinearLayout>
