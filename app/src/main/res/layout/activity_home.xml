@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,160 +7,318 @@
     android:layout_height="match_parent"
     tools:context=".presentation.features.home_activity.HomeActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingHorizontal="@dimen/_10sdp">
+        android:orientation="vertical">
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/homeBottomBar"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-
-
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="match_parent"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_hamburger" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical|end"
-                android:paddingEnd="@dimen/_20sdp"
-                android:text="@string/notepad"
-                android:textSize="@dimen/_24sdp"
-                android:textStyle="bold" />
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/homeBottomBar"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <LinearLayout
+                android:id="@+id/featureToAddNote"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="@dimen/_26sdp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="@dimen/_3sdp"
-                    android:src="@drawable/ic_premium" />
 
-                <ImageView
-                    android:id="@+id/home_search"
-                    android:layout_width="@dimen/_24sdp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_search"
-                    app:tint="@color/black" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="@dimen/_22sdp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_three_dots" />
-            </LinearLayout>
-        </LinearLayout>
+                        <ImageView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:src="@drawable/bg_feature" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/ai_notes"
+                            android:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:backgroundTint="@color/purpleD6"
+                        android:elevation="@dimen/_4sdp"
+                        app:cardCornerRadius="@dimen/_40sdp">
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/categoryRecyclerView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:listitem="@layout/category_item_layout" />
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_ai_note" />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_10sdp" />
 
-                <com.google.android.material.button.MaterialButton
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/purpleFF" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:src="@drawable/bg_feature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/ai_chat"
+                            android:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+
+                        android:backgroundTint="@color/purpleD6"
+                        android:elevation="@dimen/_4sdp"
+                        app:cardCornerRadius="@dimen/_40sdp">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_ai_chat" />
+
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_10sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:src="@drawable/bg_feature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Voice to text"
+                            android:textColor="@color/white" />
+
+                    </FrameLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+
+                        android:backgroundTint="@color/purpleD6"
+                        android:elevation="@dimen/_4sdp"
+                        app:cardCornerRadius="@dimen/_40sdp">
+
+
+                        <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_mic" />
+
+
+                    </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iconAddNote"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+
+                android:backgroundTint="@color/purpleD6"
+                android:elevation="@dimen/_4sdp"
+                app:cardCornerRadius="@dimen/_40sdp"
+
+                app:cardPreventCornerOverlap="false">
+
 
                 <ImageView
                     android:layout_width="@dimen/_18sdp"
                     android:layout_height="@dimen/_18sdp"
                     android:layout_gravity="center"
-                    android:contentDescription="@null"
-                    android:src="@drawable/ic_edit" />
-            </FrameLayout>
+                    android:src="@drawable/ic_add" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
         </LinearLayout>
 
 
-        <FrameLayout
+        <LinearLayout
+            android:id="@+id/homeBottomBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/notesIconHomeBottom"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_weight="0.25"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2" />
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/notesImgIconHomeBottom"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/ic_note_home" />
+
+                <TextView
+                    android:id="@+id/notesTextIconHomeBottom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:paddingHorizontal="@dimen/_40sdp"
-                        android:src="@drawable/bg_home" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/add_your_first_note"
-                        android:textAlignment="center"
-                        android:textColor="@color/grayD3"
-                        android:textSize="@dimen/_18ssp" />
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.5" />
-
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/viewPager"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/BottomSheet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    tools:listitem="@layout/bottom_sheet_recycler_view_item" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_20sdp" />
+                    android:text="@string/notes"
+                    android:textColor="@color/grayB1" />
 
             </LinearLayout>
-        </FrameLayout>
-    </LinearLayout>
 
-</RelativeLayout>
+            <LinearLayout
+                android:id="@+id/calenderIconHomeBottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/calenderImgIconHomeBottom"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/calenderTextIconHomeBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calender"
+                    android:textColor="@color/grayB1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchIconHomeBottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/searchImgIconHomeBottom"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/ic_search_bottom" />
+
+                <TextView
+                    android:id="@+id/searchTextIconHomeBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search"
+                    android:textColor="@color/grayB1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/templateIconHomeBottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/templateImgIconHomeBottom"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/ic_gallary" />
+
+                <TextView
+                    android:id="@+id/templateTextIconHomeBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/templates"
+                    android:textColor="@color/grayB1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/bgToHideTheAddNoteFeatures"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

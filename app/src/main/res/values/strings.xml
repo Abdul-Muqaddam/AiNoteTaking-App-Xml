@@ -25,5 +25,11 @@
     <string name="general">General</string>
     <string name="others">Others</string>
     <string name="app_languages">App Languages</string>
+    <string name="ai_notes">AI Notes</string>
+    <string name="ai_chat">AI Chat</string>
+    <string name="notepad_app">Notepad App</string>
+    <string name="favorites">Favorites</string>
+    <string name="settings">Settings</string>
+    <string name="trash">Trash</string>
 
 </resources>
