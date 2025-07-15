@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.features.Rate_us_screen.Rate_Us_Activity">
+<ImageView
+    android:layout_marginTop="@dimen/_30sdp"
+    android:id="@+id/ic_back_arrow_rate"
+    android:layout_width="@dimen/_22sdp"
+    android:layout_height="@dimen/_22sdp"
+    android:contentDescription="@null"
+    android:src="@drawable/ic_baseline_arrow_back"/>
+    <TextView
+        android:layout_marginTop="@dimen/_45sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_us"
+        android:textSize="@dimen/_25ssp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/tell_us_about_your_experience_with_the_notes_taing_app"
+        android:textSize="@dimen/_15ssp"
+        android:gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:contentDescription="@null"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_happy_emoji"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/ic_star_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/_44sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_star_shape"/>
+        <ImageView
+            android:id="@+id/ic_star_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ic_star_1"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_star_shape"/>
+        <ImageView
+            android:id="@+id/ic_star_3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ic_star_2"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_star_shape"/>
+        <ImageView
+            android:id="@+id/ic_star_4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ic_star_3"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_star_shape"/>
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ic_star_4"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_star_shape"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:backgroundTint="@color/grayB1"
+        android:text="@string/send_feedback"/>
+<TextView
+    android:layout_marginTop="@dimen/_20ssp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/maybe_later"
+    android:layout_gravity="center_horizontal"/>
+
+
+
+
+
+
+
+</LinearLayout>

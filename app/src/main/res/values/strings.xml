@@ -31,5 +31,26 @@
     <string name="favorites">Favorites</string>
     <string name="settings">Settings</string>
     <string name="trash">Trash</string>
+    <string name="favorites">Favorites</string>
+    <string name="history">History</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="share_your_experience">Share your experience</string>
+    <string name="feedback">Feedback</string>
+    <string name="add_your_suggestions">Add your suggestions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="learn_privacy_policy">Learn Privacy Policy</string>
+    <string name="version">Version</string>
+    <string name="_2_4_1">2.4.1</string>
+    <string name="please_select_the_type_of_feedback">Please Select the Type of Feedback</string>
+    <string name="connection_problem">Connection Problem</string>
+    <string name="app_not_working">App not Working</string>
+    <string name="app_take_to_much_time_on_loading">App take to much time on loading</string>
+    <string name="suggest_your_favorite_apps_others"><![CDATA[Suggest your favorite apps & others]]></string>
+    <string name="description">Description</string>
+    <string name="write_suggestion_here">Write Suggestion here ...</string>
+    <string name="submit">Submit</string>
+    <string name="tell_us_about_your_experience_with_the_notes_taing_app">Tell us about your Experience with the Notes taing App</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="maybe_later">Maybe Later</string>
 
 </resources>

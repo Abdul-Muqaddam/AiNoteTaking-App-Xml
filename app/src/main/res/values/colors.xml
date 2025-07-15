@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="shine_black33">#ff333333</color>
+    <color name="gray70">#ff707070</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purpleD6">#ff6E73D6</color>
