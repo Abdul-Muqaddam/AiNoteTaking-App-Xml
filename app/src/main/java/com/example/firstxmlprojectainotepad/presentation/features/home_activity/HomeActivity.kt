@@ -1,5 +1,6 @@
 package com.example.firstxmlprojectainotepad.presentation.features.home_activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -12,6 +13,7 @@ import com.example.firstxmlprojectainotepad.presentation.features.home_activity.
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.bottom_page_fragments.NotesFragment
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.bottom_page_fragments.SearchFragments
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.bottom_page_fragments.TemplatesFragments
+import com.example.firstxmlprojectainotepad.presentation.features.setting_activity.SettingsActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -33,5 +35,9 @@ class HomeActivity : AppCompatActivity() {
             })
         binding.BottomSheet.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.homeSearch.setOnClickListener{
+            val intent=Intent(this,SettingsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
