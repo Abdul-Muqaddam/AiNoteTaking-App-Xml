@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="@dimen/_15sdp"
+
     tools:context=".presentation.features.setting_activity.SettingsActivity">
 
 
@@ -21,6 +21,7 @@
     <!-- android:layout_centerVertical="true"-->
 
     <FrameLayout
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:paddingTop="@dimen/_20sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -43,14 +44,14 @@
                 android:layout_width="@dimen/_58sdp"
                 android:layout_height="@dimen/_58sdp"
                 android:contentDescription="@null"
-                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_8sdp"
                 android:src="@drawable/ic_crown" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_6sdp"
                 android:orientation="vertical">
 
                 <TextView
@@ -76,6 +77,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10ssp"
         android:elevation="@dimen/_20sdp"
         app:cardCornerRadius="@dimen/_20sdp">
@@ -238,6 +240,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10ssp"
