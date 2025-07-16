@@ -52,5 +52,11 @@
     <string name="tell_us_about_your_experience_with_the_notes_taing_app">Tell us about your Experience with the Notes taing App</string>
     <string name="send_feedback">Send feedback</string>
     <string name="maybe_later">Maybe Later</string>
+    <string name="_empty"> </string>
+    <string name="very_bad">Very Bad</string>
+    <string name="confused">Confused</string>
+    <string name="average">Average</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
 
 </resources>

@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingHorizontal="@dimen/_15sdp"
     android:id="@+id/main"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.features.feedback_screen.Feedback_activity">
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginHorizontal="@dimen/_19sdp"
     android:paddingTop="@dimen/_30sdp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -33,9 +33,16 @@
         android:textAlignment="center"
         android:textSize="@dimen/_22ssp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_19sdp">
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_30sdp"/>
+        android:layout_height="@dimen/_20sdp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +78,11 @@
             android:buttonTint="@color/purpleF0"
             android:text="@string/suggest_your_favorite_apps_others"
             android:textColor="@color/gray70"/>
+</LinearLayout>
+
+
  <TextView
+     android:layout_marginHorizontal="@dimen/_19sdp"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:text="@string/description"
@@ -79,6 +90,7 @@
      android:textColor="@color/shine_black33"
      android:textStyle="bold"/>
     <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="@dimen/_19sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
@@ -86,13 +98,14 @@
         android:elevation="@dimen/_20sdp">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_187sdp"
+            android:layout_height="@dimen/_190sdp"
             android:hint="@string/write_suggestion_here"
             android:gravity="top"
             android:padding="@dimen/_13ssp"
             android:textColorHint="@color/gray70"/>
 
     </androidx.cardview.widget.CardView>
+
 <Button
     android:layout_margin="@dimen/_30sdp"
     android:layout_width="match_parent"

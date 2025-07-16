@@ -18,11 +18,11 @@ class SettingsActivity : AppCompatActivity() {
         binding=ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         enableEdgeToEdge()
-        binding.feedbackArrow.setOnClickListener{
+        binding.feedbackParent.setOnClickListener{
             val intent=Intent(this,Feedback_activity::class.java)
             startActivity(intent)
         }
-        binding.RateUsArrow.setOnClickListener{
+        binding.RateUsParent.setOnClickListener{
             val intent=Intent(this,Rate_Us_Activity::class.java)
             startActivity(intent)
         }
