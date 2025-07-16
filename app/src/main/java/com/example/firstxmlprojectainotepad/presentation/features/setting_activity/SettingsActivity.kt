@@ -10,6 +10,7 @@ import com.example.firstxmlprojectainotepad.R
 import com.example.firstxmlprojectainotepad.databinding.ActivitySettingsBinding
 import com.example.firstxmlprojectainotepad.presentation.features.Rate_us_screen.Rate_Us_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.feedback_screen.Feedback_activity
+import com.example.firstxmlprojectainotepad.presentation.features.premium_screen.Premium_Activity
 
 class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
@@ -24,6 +25,10 @@ class SettingsActivity : AppCompatActivity() {
         }
         binding.RateUsParent.setOnClickListener{
             val intent=Intent(this,Rate_Us_Activity::class.java)
+            startActivity(intent)
+        }
+        binding.premiumBar.setOnClickListener{
+            val intent=Intent(this,Premium_Activity::class.java)
             startActivity(intent)
         }
 

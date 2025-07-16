@@ -58,5 +58,22 @@
     <string name="average">Average</string>
     <string name="good">Good</string>
     <string name="excellent">Excellent</string>
+    <string name="skip">skip</string>
+    <string name="hi">Hi!</string>
+    <string name="let_me_guide_you_through_your_first_note_creation">Let me guide you through your first note creation.</string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure you want to Exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="choose_a_subscription_plan_and_get_the_best_experience_of_using_the_app">Choose a subscription plan and get the best experience of using the app</string>
+    <string name="unlock_premium_features">Unlock Premium Features</string>
+    <string name="remove_all_ads">Remove All Ads</string>
+    <string name="unlock_all_premium_features">Unlock All Premium Features</string>
+    <string name="unlimited_chat_credits">Unlimited Chat Credits</string>
+    <string name="one_time_purchase">One Time Purchase</string>
+    <string name="life_time_access">Life time access</string>
+    <string name="subscribe_now">Subscribe Now</string>
+    <string name="term_of_use">Term of Use</string>
+
 
 </resources>

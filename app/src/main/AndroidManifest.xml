@@ -13,6 +13,15 @@
         android:theme="@style/Theme.FirstXMLProjectAINotePad"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.features.premium_screen.Premium_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.features.bottom_exit_dialog.BottomExitDialog"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.features.Hello_screen.Hello_Activity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.features.Rate_us_screen.Rate_Us_Activity"
             android:exported="false" />
         <activity

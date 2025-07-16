@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.features.Hello_screen.Hello_Activity">
+<TextView
+    android:id="@+id/skipbtn"
+    android:gravity="end"
+    android:layout_marginTop="@dimen/_60ssp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/skip"
+    android:textSize="@dimen/_14ssp"
+    android:textColor="@color/purpleF0"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hi"
+        android:textStyle="bold"
+        android:textSize="@dimen/_25ssp"/>
+    <TextView
+        android:layout_marginTop="@dimen/_10ssp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_20ssp"
+        android:text="@string/let_me_guide_you_through_your_first_note_creation"/>
+    <ImageView
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/hi_screen_ic"/>
+
+
+    <Button
+
+        android:id="@+id/hi_button"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Continue"
+        android:backgroundTint="@color/purpleF0"
+        android:drawableEnd="@drawable/ic_white_arrow_1"/>
+
+
+
+</LinearLayout>
