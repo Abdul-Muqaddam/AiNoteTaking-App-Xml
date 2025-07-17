@@ -3,16 +3,33 @@ package com.example.firstxmlprojectainotepad.presentation.features.language_frag
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
+
+data class LanguageViewModelState(
+    var filterListLanguage: List<LanguageModel> = LanguageModel.entries.toList()
+)
 
 
-class LanguageViewModel : ViewModel(){
-    private val _language= listOf("English","German","French","Japan","Korean","Italian","Thai","Afrikaans","Turkish","Spanish","Chinese","Hindi","Russian","Urdu")
-    private val _filteredList= MutableStateFlow(_language)
-    val filteredList: StateFlow<List<String>> =_filteredList
+class LanguageViewModel : ViewModel() {
+    private val _state = MutableStateFlow(LanguageViewModelState())
+    val state: StateFlow<LanguageViewModelState> get() = _state
 
-    fun onSearchQueryChanged(query: String){
-        val filtered = if(query.isBlank()) _language
-        else _language.filter{it.contains(query,ignoreCase = true)}
-        _filteredList.value=filtered
+
+    fun onSearchQueryChanged(query: String) {
+
+        val filtered=if(query.isBlank()){
+            LanguageModel.entries.toList()
+        }else{
+            _state.value.filterListLanguage.filter{
+                it.displayName.contains(query,ignoreCase = true)
+            }
+        }
+
+        _state.update {
+            it.copy(
+                filterListLanguage = filtered
+            )
+        }
+
     }
 }
