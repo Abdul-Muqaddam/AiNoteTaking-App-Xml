@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.firstxmlprojectainotepad.databinding.LanguageItemLayoutBinding
 
 class LanguageAdaptor(
-    private val language: List<LanguageModel>
 ) : RecyclerView.Adapter<LanguageAdaptor.LanguageViewHolder>() {
+    private var language: List<LanguageModel> = emptyList()
 
     private var selectedPosition = 0
 
@@ -50,5 +50,10 @@ class LanguageAdaptor(
 
     override fun getItemCount(): Int {
         return language.size
+    }
+
+    fun submitList(list: List<LanguageModel>){
+        language=list
+        notifyDataSetChanged()
     }
 }

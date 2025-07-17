@@ -12,6 +12,7 @@ import com.example.firstxmlprojectainotepad.R
 import com.example.firstxmlprojectainotepad.databinding.FragmentNotesBinding
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.adapter.CategoryAdapter
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.categoriesItem
+import com.example.firstxmlprojectainotepad.presentation.features.premium_screen.Premium_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.setting_activity.SettingsActivity
 
 
@@ -30,6 +31,10 @@ class NotesFragment : Fragment(){
         binding.categoryRecyclerView.adapter = CategoryAdapter(categoriesItem = categoriesItem)
         binding.IconHamburgur.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
+        binding.premium.setOnClickListener{
+            val intent = Intent(requireContext(),Premium_Activity::class.java)
+            startActivity(intent)
         }
         binding.DrawerSettings.setOnClickListener {
             val intent= Intent(requireContext(), SettingsActivity::class.java)

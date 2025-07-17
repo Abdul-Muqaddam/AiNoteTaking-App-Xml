@@ -46,6 +46,7 @@
             android:layout_height="@dimen/_10sdp" />
 
         <RelativeLayout
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/search_box_border"
@@ -60,6 +61,7 @@
                 android:src="@drawable/ic_search" />
 
             <EditText
+                android:id="@+id/LanguageInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

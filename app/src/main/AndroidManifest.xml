@@ -16,6 +16,15 @@
             android:name=".presentation.features.speech_to_text.SpeechToTextActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.features.premium_screen.Premium_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.features.bottom_exit_dialog.BottomExitDialog"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.features.Hello_screen.Hello_Activity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.features.Rate_us_screen.Rate_Us_Activity"
             android:exported="false" />
         <activity
