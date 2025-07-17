@@ -1,5 +1,6 @@
 package com.example.firstxmlprojectainotepad.presentation.features.home_activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.firstxmlprojectainotepad.R
 import com.example.firstxmlprojectainotepad.databinding.ActivityHomeBinding
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.adapter.BottomAdapter
+import com.example.firstxmlprojectainotepad.presentation.features.speech_to_text.SpeechToTextActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -26,6 +28,11 @@ class HomeActivity : AppCompatActivity() {
 
 
 
+
+        binding.VoiceToTextBtn.setOnClickListener {
+            val intent= Intent(this, SpeechToTextActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.featureToAddNote.visibility = View.GONE
 

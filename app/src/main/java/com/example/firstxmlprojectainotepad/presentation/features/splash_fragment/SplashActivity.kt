@@ -20,7 +20,6 @@ class SplashActivity : AppCompatActivity() {
 
 
         binding.btnContinue.setOnClickListener {
-            Toast.makeText(this,"clicked", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, LanguageActivity::class.java)
             startActivity(intent)
             finish()

@@ -23,6 +23,7 @@ class LanguageActivity : AppCompatActivity() {
         binding.isLanguageSelect.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
