@@ -12,5 +12,26 @@
     <color name="grayf3">#ffF3F3F3</color>
     <color name="grayD3">#D3D3D3</color>
     <color name="grayB1">#B1B1B1</color>
+    <color name="whitef5">#F5F5F5</color>
+    <color name="whitefd">#F6F6FD</color>
+    <color name="grayCD">#CDCDCD</color>
     <color name="purpleF0">#9680F0</color>
+    <color name="grayBB">#BBBBBB</color>
+    <color name="black30">#303030</color>
+    <color name="grayF8">#F5F0F8</color>
+    <color name="yellowEA">#FEFBEA</color>
+    <color name="pinkF8">#FFEEF8</color>
+    <color name="blueFF">#E9F3FF</color>
+    <color name="pinkEB">#FFF5EB</color>
+    <color name="greenE5">#F2FFE5</color>
+    <color name="yellowCE">#FFF8CE</color>
+    <color name="blueF6">#D2F6F6</color>
+    <color name="blueF4">#F4F4F4</color>
+    <color name="purple2FF">#F1E2FF</color>
+    <color name="pinkDB">#FEDCDB</color>
+    <color name="greenD3">#CFFFD3</color>
+    <color name="gray7C">#7C7C7C</color>
+
+
+
 </resources>

@@ -56,6 +56,7 @@ class LanguageActivity : AppCompatActivity() {
         binding.isLanguageSelect.setOnClickListener {
             val intent = Intent(this, Hello_Activity::class.java)
             startActivity(intent)
+            finish()
         }
 
 
