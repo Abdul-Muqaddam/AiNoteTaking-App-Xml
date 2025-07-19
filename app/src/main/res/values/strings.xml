@@ -85,6 +85,8 @@
     <string name="life_time_access">Life time access</string>
     <string name="subscribe_now">Subscribe Now</string>
     <string name="term_of_use">Term of Use</string>
+    <string name="note_background">Note Background</string>
+    <string name="create_note_with_this">Create Note with this</string>
 
 
 </resources>
