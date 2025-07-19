@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.firstxmlprojectainotepad.BuildConfig
 import com.example.firstxmlprojectainotepad.databinding.ActivityLanguageBinding
 import com.example.firstxmlprojectainotepad.presentation.features.Hello_screen.Hello_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.HomeActivity
@@ -56,6 +57,7 @@ class LanguageActivity : AppCompatActivity() {
         binding.isLanguageSelect.setOnClickListener {
             val intent = Intent(this, Hello_Activity::class.java)
             startActivity(intent)
+            Log.d("api_key", BuildConfig.OPENAI_API_KEY)
             finish()
         }
 

@@ -2,17 +2,22 @@ package com.example.firstxmlprojectainotepad.presentation.features.Hello_screen
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.firstxmlprojectainotepad.R
+import androidx.lifecycle.lifecycleScope
 import com.example.firstxmlprojectainotepad.databinding.ActivityHelloBinding
+import com.example.firstxmlprojectainotepad.networking.createHttpClient
+import com.example.firstxmlprojectainotepad.networking.sendMessageToChatGPT
 import com.example.firstxmlprojectainotepad.presentation.features.bottom_exit_dialog.BottomExitDialog
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.HomeActivity
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.android.Android
+import kotlinx.coroutines.launch
 
 class Hello_Activity : AppCompatActivity() {
     private lateinit var binding: ActivityHelloBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHelloBinding.inflate(layoutInflater)
@@ -21,11 +26,25 @@ class Hello_Activity : AppCompatActivity() {
         binding.hiButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         }
         binding.skipbtn.setOnClickListener{
             val intent = Intent(this,BottomExitDialog::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
 }
+
+
+//private val client: HttpClient by lazy {
+//    createHttpClient(Android.create())
+//}
+//
+//lifecycleScope.launch {
+//    val response = sendMessageToChatGPT(client, "Write a blog post on tech!",
+//        "23a7819980msh3eb3b5081972f4cp1eed03jsn403f78d8eea7")
+//    Log.d("chatgpt","ChatGPT: $response")
+//    Log.d("apikey", "23a7819980msh3eb3b5081972f4cp1eed03jsn403f78d8eea7")
+//}
