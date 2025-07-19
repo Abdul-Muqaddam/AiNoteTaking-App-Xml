@@ -53,4 +53,5 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.1")
     implementation("com.kizitonwose.calendar:view:2.7.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.8")
 }

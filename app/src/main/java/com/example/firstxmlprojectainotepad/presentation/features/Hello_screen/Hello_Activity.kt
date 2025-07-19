@@ -21,6 +21,7 @@ class Hello_Activity : AppCompatActivity() {
         binding.hiButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+
         }
         binding.skipbtn.setOnClickListener{
             val intent = Intent(this,BottomExitDialog::class.java)
