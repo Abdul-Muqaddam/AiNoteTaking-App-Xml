@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".presentation.features.Popup_template.PopupTemplateActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_30sdp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_18sdp">
+
+    <ImageView
+        android:id="@+id/cross_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_cross" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/note_background"
+        android:textSize="@dimen/_18sdp" />
+
+    <ImageView
+        android:id="@+id/templateChangableBgColor"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_blue_temp_color" />
+
+    <Button
+        android:id="@+id/button_note_with_this"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/create_note_with_this"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

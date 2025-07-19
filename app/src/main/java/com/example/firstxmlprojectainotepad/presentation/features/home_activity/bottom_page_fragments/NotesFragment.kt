@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstxmlprojectainotepad.R
 import com.example.firstxmlprojectainotepad.databinding.FragmentNotesBinding
+import com.example.firstxmlprojectainotepad.presentation.features.Popup_template.PopupTemplateActivity
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.adapter.CategoryAdapter
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.categoriesItem
 import com.example.firstxmlprojectainotepad.presentation.features.premium_screen.Premium_Activity
@@ -38,6 +39,10 @@ class NotesFragment : Fragment(){
         }
         binding.DrawerSettings.setOnClickListener {
             val intent= Intent(requireContext(), SettingsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.homeSearch.setOnClickListener(){
+            val intent=Intent(requireContext(),PopupTemplateActivity::class.java)
             startActivity(intent)
         }
         return binding.root
