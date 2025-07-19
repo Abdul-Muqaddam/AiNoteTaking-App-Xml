@@ -1,7 +1,6 @@
 package com.example.firstxmlprojectainotepad.presentation.features.home_activity.bottom_page_fragments.templates_fragments
 
 import android.app.Dialog
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -29,6 +28,7 @@ import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TemplatesFragments : Fragment(
+
 
 ) {
 
@@ -69,15 +69,15 @@ class TemplatesFragments : Fragment(
         )
 
 
+
+
         recyclerView.adapter =
             TemplatesAdapter(colors, onTemplateClicks = {
                 showtemplatedialog(it)
             })
         return binding.root
 
-
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

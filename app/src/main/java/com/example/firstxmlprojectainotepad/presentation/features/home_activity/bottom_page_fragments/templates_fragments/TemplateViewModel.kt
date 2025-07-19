@@ -22,7 +22,7 @@ class TemplateViewModel(
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(TemplateViewModelState())
-    val state: StateFlow<TemplateViewModelState> get() = _state
+    val state: StateFlow<TemplateViewModelState> get() =_state
 
     val allImages: StateFlow<List<ImageEntity>> = repository.allImages
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
