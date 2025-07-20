@@ -7,7 +7,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstxmlprojectainotepad.R
 
-
 class TemplatesAdapter(
     private val colors: List<Int>,
     private val onTemplateClicks: (Int) -> Unit
@@ -16,7 +15,6 @@ class TemplatesAdapter(
         parent: ViewGroup,
         viewType: Int
     ): TemplatesViewHolder {
-
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.templates_item_card, parent, false)
 
@@ -27,7 +25,6 @@ class TemplatesAdapter(
         holder: TemplatesViewHolder,
         position: Int
     ) {
-
         val color = colors[position]
         holder.itemView.setBackgroundColor(colors[position])
         holder.itemView.setOnClickListener() {
@@ -35,8 +32,7 @@ class TemplatesAdapter(
         }
     }
 
-    override fun getItemCount(): Int=colors.size
-
+    override fun getItemCount(): Int = colors.size
 
     inner class TemplatesViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview)
 }

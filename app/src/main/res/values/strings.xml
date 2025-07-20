@@ -95,6 +95,11 @@
     <string name="wed">Wed</string>
     <string name="thu">Thu</string>
     <string name="fri">Fri</string>
+    <string name="ask_me_anything">Ask me anything...</string>
+    <string name="get_more_credit">Get More Credit</string>
+    <string name="ai_notepad_is_based_on_the_paid_service_of_chatgpt_which_is_why_each_message_consumes_2_credits">Ai Notepad is based on the paid service of ChatGPT. which is why each message consumes 2 credits.</string>
+    <string name="get_5_free_credits">Get 5 Free Credits</string>
+    <string name="watch_ad_to_earn_5_more_credits">Watch Ad to earn 5 more Credits.</string>
 
 
 </resources>

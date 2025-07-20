@@ -18,6 +18,12 @@
         android:theme="@style/Theme.FirstXMLProjectAINotePad"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.features.Credit_Dialog.credit_dialog_activity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.features.Chat_Page.Chat_Page_Activity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.features.Popup_template.PopupTemplateActivity"
             android:exported="false" />
         <activity
