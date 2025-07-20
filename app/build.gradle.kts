@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+
     id("org.jetbrains.kotlin.plugin.serialization") version "2.0.21"
 }
 
@@ -14,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.firstxmlprojectainotepad"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -77,6 +79,13 @@ dependencies {
 //    implementation("io.insert-koin:koin-android:4.1.0")
 //    implementation("io.ktor:ktor-client-content-negotiation:3.2.2")
 //    implementation("io.ktor:ktor-client-auth:3.2.2")
+    implementation("io.insert-koin:koin-android:4.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.0")
+    implementation("androidx.room:room-runtime:2.7.2")
+    kapt("androidx.room:room-compiler:2.7.2")
+    implementation("androidx.room:room-ktx:2.7.2")
+    implementation("io.insert-koin:koin-android:4.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
 //    implementation("io.ktor:ktor-serialization-kotlinx-json:3.2.2")
 }

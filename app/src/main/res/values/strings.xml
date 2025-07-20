@@ -87,6 +87,14 @@
     <string name="term_of_use">Term of Use</string>
     <string name="note_background">Note Background</string>
     <string name="create_note_with_this">Create Note with this</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="calendar">Calendar</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
 
 
 </resources>

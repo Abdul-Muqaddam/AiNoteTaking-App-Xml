@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.firstxmlprojectainotepad.databinding.ActivitySplashBinding
 import com.example.firstxmlprojectainotepad.presentation.features.language_fragment.LanguageActivity
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.GlobalContext.startKoin
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding

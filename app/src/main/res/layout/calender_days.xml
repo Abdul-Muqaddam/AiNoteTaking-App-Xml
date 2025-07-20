@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/red6A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sun" />
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/mon" />
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/tue" />
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/wed" />
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/thu" />
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/fri" />
+
+    <TextView
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/red6A"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Sat" />
+</LinearLayout>

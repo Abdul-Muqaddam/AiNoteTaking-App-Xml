@@ -1,34 +1,34 @@
 package com.example.firstxmlprojectainotepad.presentation.features.home_activity.bottom_page_fragments.templates_fragments
 
 import android.app.Dialog
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.blue
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.firstxmlprojectainotepad.R
 import com.example.firstxmlprojectainotepad.databinding.ActivityPopupTemplateBinding
 import com.example.firstxmlprojectainotepad.databinding.FragmentTemplatesBinding
-import com.example.firstxmlprojectainotepad.presentation.features.Rate_us_screen.RateUsViewModel
+import com.example.firstxmlprojectainotepad.presentation.features.home_activity.bottom_page_fragments.templates_fragments.utils.saveImageToInternalStorage
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TemplatesFragments : Fragment(
 
+
 ) {
 
-class TemplatesFragments : Fragment(){
+    private val viewModel: TemplateViewModel by viewModel()
     private var _binding: FragmentTemplatesBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -37,9 +37,10 @@ class TemplatesFragments : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding= FragmentTemplatesBinding.inflate(layoutInflater,container,false)
+
+        _binding = FragmentTemplatesBinding.inflate(layoutInflater, container, false)
         val recyclerView = binding.TemplateRecyclerView
-        recyclerView.layoutManager= GridLayoutManager(requireContext(),4)
+        recyclerView.layoutManager = GridLayoutManager(requireContext(), 4)
 
         val colors = listOf(
             ContextCompat.getColor(requireContext(), R.color.yellowEA),
@@ -64,7 +65,7 @@ class TemplatesFragments : Fragment(){
         )
 
 
-        recyclerView.adapter = TemplatesAdapter(colors)
+
 
         recyclerView.adapter =
             TemplatesAdapter(colors, onTemplateClicks = {
@@ -76,12 +77,12 @@ class TemplatesFragments : Fragment(){
 
     override fun onDestroy() {
         super.onDestroy()
-        _binding=null
+        _binding = null
     }
 
     fun showtemplatedialog(selectedColor: Int) {
-        val viewModel = ViewModelProvider(this)[TemplateViewModel::class.java]
-        viewModel.SelectedColor(selectedColor)
+
+        viewModel.selectColor(selectedColor)
 
 
         val dialog = Dialog(requireContext())
@@ -114,7 +115,36 @@ class TemplatesFragments : Fragment(){
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
-        dialog.window?.decorView?.setPadding(30,0,30,0)
+        dialog.window?.decorView?.setPadding(30, 0, 30, 0)
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.allImages.collect { imageList ->
+                    val firstUri = imageList.firstOrNull()?.imagePath?.let { Uri.parse(it) }
+                    binding.imageView.setImageURI(firstUri)
+                }
+            }
+        }
+
+        val imagePickerLauncher = registerForActivityResult(
+            ActivityResultContracts.GetContent()
+        ) { uri ->
+            uri?.let {
+                val savedImagePath =
+                    saveImageToInternalStorage(context = requireContext(), uri = uri)
+                viewModel.saveImage(path = savedImagePath, title = null)
+            }
+        }
+
+        binding.uploadImageBtn.setOnClickListener {
+            imagePickerLauncher.launch("image/*")
+        }
+    }
+
 }
 
