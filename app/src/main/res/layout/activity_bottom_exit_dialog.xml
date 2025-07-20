@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".presentation.features.bottom_exit_dialog.BottomExitDialog">
 
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_30sdp">
 
     <LinearLayout
-        android:paddingVertical="@dimen/_30sdp"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:paddingHorizontal="@dimen/_20sdp">
 
         <ImageView
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
             android:layout_gravity="center_horizontal"
@@ -41,9 +42,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_32sdp"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_20sdp">
 
             <Button
+                android:id="@+id/yes_button"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:backgroundTint="@color/purpleFF"
@@ -55,6 +58,7 @@
                 android:layout_height="wrap_content" />
 
             <Button
+                android:id="@+id/No_button"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:backgroundTint="@color/purpleF0"
@@ -66,4 +70,5 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</FrameLayout>

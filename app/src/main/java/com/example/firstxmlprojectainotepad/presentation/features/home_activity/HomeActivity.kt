@@ -1,15 +1,28 @@
 package com.example.firstxmlprojectainotepad.presentation.features.home_activity
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import android.widget.Button
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.firstxmlprojectainotepad.R
+import com.example.firstxmlprojectainotepad.databinding.ActivityBottomExitDialogBinding
 import com.example.firstxmlprojectainotepad.databinding.ActivityHomeBinding
+import com.example.firstxmlprojectainotepad.presentation.features.Chat_Page.Chat_Page_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.adapter.BottomAdapter
 import com.example.firstxmlprojectainotepad.presentation.features.speech_to_text.SpeechToTextActivity
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -42,8 +55,8 @@ class HomeActivity : AppCompatActivity() {
             binding.bgToHideTheAddNoteFeatures.visibility = View.GONE
         }
         binding.iconAddNote.setOnClickListener {
-            binding.featureToAddNote.visibility = View.VISIBLE
-            binding.bgToHideTheAddNoteFeatures.visibility = View.VISIBLE
+            val intent=Intent(this,Chat_Page_Activity::class.java)
+            startActivity(intent)
         }
 
 
@@ -117,5 +130,54 @@ class HomeActivity : AppCompatActivity() {
 //            val intent=Intent(this,SettingsActivity::class.java)
 //            startActivity(intent)
 //        }
+
+
+        fun showExitDialog() {
+            val dialogBinding = ActivityBottomExitDialogBinding.inflate(layoutInflater)
+            val bottomSheetDialog = BottomSheetDialog(this, R.style.MyBottomSheetDialogTheme)
+            bottomSheetDialog.setContentView(dialogBinding.root)
+            bottomSheetDialog.setCancelable(true)
+
+            dialogBinding.NoButton.setOnClickListener {
+                bottomSheetDialog.dismiss()
+            }
+
+            dialogBinding.yesButton.setOnClickListener {
+                bottomSheetDialog.dismiss()
+                finish()
+            }
+
+            // Fix margins/padding when shown
+            bottomSheetDialog.setOnShowListener { dialog ->
+                val bottomSheet = (dialog as BottomSheetDialog)
+                    .findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+
+                bottomSheet?.let { sheet ->
+                    sheet.setBackgroundResource(R.drawable.rounded_top_dialog)
+
+                    val behavior = BottomSheetBehavior.from(sheet)
+                    behavior.isFitToContents = true
+                    behavior.skipCollapsed = true
+                    behavior.state = BottomSheetBehavior.STATE_EXPANDED
+
+                    // Force zero padding and overlap with nav bar
+                    sheet.setPadding(0, 0, 0, 0)
+                    val params = sheet.layoutParams as ViewGroup.MarginLayoutParams
+                    params.setMargins(0, 0, 0, 0)
+                    sheet.layoutParams = params
+
+                    // Remove system insets (nav bar gap)
+                    ViewCompat.setOnApplyWindowInsetsListener(sheet) { v, insets -> WindowInsetsCompat.CONSUMED }
+                }
+            }
+
+            bottomSheetDialog.show()
+        }
+
+        onBackPressedDispatcher.addCallback {
+            showExitDialog()
+        }
+
     }
 }
+

@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.firstxmlprojectainotepad.databinding.ActivityHelloBinding
 import com.example.firstxmlprojectainotepad.networking.createHttpClient
 import com.example.firstxmlprojectainotepad.networking.sendMessageToChatGPT
+import com.example.firstxmlprojectainotepad.presentation.features.Chat_Page.Chat_Page_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.bottom_exit_dialog.BottomExitDialog
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.HomeActivity
 import io.ktor.client.HttpClient
@@ -29,7 +30,7 @@ class Hello_Activity : AppCompatActivity() {
             finish()
         }
         binding.skipbtn.setOnClickListener{
-            val intent = Intent(this,BottomExitDialog::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
