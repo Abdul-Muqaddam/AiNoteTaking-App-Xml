@@ -55,8 +55,8 @@ class HomeActivity : AppCompatActivity() {
             binding.bgToHideTheAddNoteFeatures.visibility = View.GONE
         }
         binding.iconAddNote.setOnClickListener {
-            binding.featureToAddNote.visibility = View.VISIBLE
-            binding.bgToHideTheAddNoteFeatures.visibility = View.VISIBLE
+            val intent=Intent(this,Chat_Page_Activity::class.java)
+            startActivity(intent)
         }
 
         binding.AiChat.setOnClickListener {

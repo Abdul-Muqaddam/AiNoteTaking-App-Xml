@@ -12,6 +12,9 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.firstxmlprojectainotepad.R
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstxmlprojectainotepad.databinding.ActivityChatPageBinding
@@ -23,6 +26,7 @@ import io.ktor.client.HttpClient
 import io.ktor.client.engine.android.Android
 import kotlinx.coroutines.launch
 
+import com.example.firstxmlprojectainotepad.presentation.features.speech_to_text.SpeechToTextActivity
 
 class Chat_Page_Activity : AppCompatActivity() {
     private lateinit var binding: ActivityChatPageBinding
