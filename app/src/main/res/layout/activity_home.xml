@@ -81,6 +81,7 @@
 
 
                         <ImageView
+                            android:id="@+id/ai_notes"
                             android:layout_width="@dimen/_18sdp"
                             android:layout_height="@dimen/_18sdp"
                             android:layout_gravity="center"
@@ -130,6 +131,7 @@
 
 
                         <ImageView
+                            android:id="@+id/Ai_chat"
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"

@@ -69,12 +69,15 @@ class TemplatesFragments : Fragment(
         )
 
 
+        recyclerView.adapter = TemplatesAdapter(
+            colors = colors,
+            onTemplateClicks = { selectedColor -> showtemplatedialog(selectedColor) },
+        )
 
-
-        recyclerView.adapter =
-            TemplatesAdapter(colors, onTemplateClicks = {
-                showtemplatedialog(it)
-            })
+//        recyclerView.adapter =
+//            TemplatesAdapter(colors, onTemplateClicks = {
+//                showtemplatedialog(it)
+//            )}
         return binding.root
 
     }

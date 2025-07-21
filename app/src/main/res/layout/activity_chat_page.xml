@@ -109,14 +109,12 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/transparent"
-                        android:paddingVertical="@dimen/_10sdp"
-                        app:cornerRadius="@dimen/_8sdp"
-                        app:strokeColor="@color/grayB1"
-                        app:strokeWidth="@dimen/_1sdp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/_100sdp"
+                app:cardCornerRadius="@dimen/_20sdp">
+
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -158,6 +156,7 @@
                             app:layout_constraintTop_toTopOf="@+id/message_input" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
                 </FrameLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

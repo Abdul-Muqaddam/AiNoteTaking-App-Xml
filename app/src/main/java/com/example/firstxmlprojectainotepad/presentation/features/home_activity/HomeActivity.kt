@@ -20,6 +20,7 @@ import com.example.firstxmlprojectainotepad.R
 import com.example.firstxmlprojectainotepad.databinding.ActivityBottomExitDialogBinding
 import com.example.firstxmlprojectainotepad.databinding.ActivityHomeBinding
 import com.example.firstxmlprojectainotepad.presentation.features.Chat_Page.Chat_Page_Activity
+import com.example.firstxmlprojectainotepad.presentation.features.Notes_Screen.Notes_Screen_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.adapter.BottomAdapter
 import com.example.firstxmlprojectainotepad.presentation.features.speech_to_text.SpeechToTextActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -46,6 +47,15 @@ class HomeActivity : AppCompatActivity() {
             val intent= Intent(this, SpeechToTextActivity::class.java)
             startActivity(intent)
         }
+        binding.AiChat.setOnClickListener(){
+            val intent=Intent(this,Chat_Page_Activity::class.java)
+            startActivity(intent)
+        }
+
+        binding.aiNotes.setOnClickListener(){
+            val intent=Intent(this,Notes_Screen_Activity::class.java)
+            startActivity(intent)
+        }
 
         binding.featureToAddNote.visibility = View.GONE
 
@@ -55,8 +65,8 @@ class HomeActivity : AppCompatActivity() {
             binding.bgToHideTheAddNoteFeatures.visibility = View.GONE
         }
         binding.iconAddNote.setOnClickListener {
-            val intent=Intent(this,Chat_Page_Activity::class.java)
-            startActivity(intent)
+            binding.featureToAddNote.visibility = View.VISIBLE
+            binding.bgToHideTheAddNoteFeatures.visibility = View.VISIBLE
         }
 
         binding.AiChat.setOnClickListener {
