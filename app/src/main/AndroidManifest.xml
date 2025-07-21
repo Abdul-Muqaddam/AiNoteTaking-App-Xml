@@ -22,6 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".presentation.features.Chat_Page.Chat_Page_Activity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity
             android:name=".presentation.features.Popup_template.PopupTemplateActivity"

@@ -59,8 +59,7 @@
                 android:layout_height="@dimen/_90sdp"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal|bottom"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
 
                 <ImageView
@@ -76,15 +75,15 @@
                     android:textColor="@color/grayBB"
                     android:textSize="@dimen/_16ssp" />
             </LinearLayout>
+
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/CompletedTapToRecord"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_90sdp"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal|bottom"
                 android:orientation="vertical"
-                >
+                android:visibility="gone">
 
 
                 <ImageView
@@ -103,11 +102,11 @@
 
 
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/recordingInProcess"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_90sdp"
-                android:gravity="center_horizontal|bottom">
+                android:gravity="center_horizontal|bottom"
+                android:visibility="gone">
 
                 <LinearLayout
 
@@ -194,12 +193,22 @@
                     android:paddingVertical="@dimen/_25sdp"
                     app:cornerRadius="@dimen/_8sdp" />
 
-                <LinearLayout
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/RecordingAnimation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_recording_in_progress" />
 
+                <LinearLayout
+                    android:id="@+id/RecordingInProgressTimeLineImg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="visible">
 
                     <ImageView
                         android:layout_width="@dimen/_170sdp"
@@ -245,24 +254,25 @@
                 android:textSize="@dimen/_18ssp" />
 
 
-            <TextView
+            <EditText
                 android:id="@+id/RecordingCompletedTxt"
-                android:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_17sdp"
                 android:layout_marginVertical="@dimen/_16sdp"
-                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ut_enim_ad_minim_veniam_quis_nostrud_exercitation_ullamco_laboris_nisi_ut_aliquip_ex_ea_commodo_consequat"
+                android:background="@color/transparent"
+                android:text="@string/_empty"
                 android:textAlignment="center"
                 android:textColor="@color/black30"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
 
             <LinearLayout
                 android:id="@+id/RecordingCompletedFeature"
-                android:visibility="visible"
-                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="visible">
 
 
                 <FrameLayout
@@ -273,61 +283,64 @@
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_26sdp"
-                        android:backgroundTint="@color/grayF8"/>
+                        android:backgroundTint="@color/grayF8" />
 
 
                     <LinearLayout
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_marginHorizontal="@dimen/_3sdp"
                             android:layout_width="@dimen/_12sdp"
                             android:layout_height="@dimen/_12sdp"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
                             android:src="@drawable/ic_add_stt" />
 
                         <TextView
-                            android:layout_marginEnd="@dimen/_8sdp"
-                            android:textColor="@color/shine_black33"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/add_note"/>
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:text="@string/add_note"
+                            android:textColor="@color/shine_black33" />
                     </LinearLayout>
                 </FrameLayout>
+
                 <FrameLayout
-                    android:layout_marginHorizontal="@dimen/_4sdp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_4sdp">
 
 
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="@dimen/_52sdp"
                         android:layout_height="@dimen/_26sdp"
-                        android:backgroundTint="@color/grayF8"/>
+                        android:backgroundTint="@color/grayF8" />
 
 
                     <LinearLayout
-                        android:layout_gravity="center"
+                        android:id="@+id/copySTTResult"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_marginHorizontal="@dimen/_3sdp"
                             android:layout_width="@dimen/_12sdp"
                             android:layout_height="@dimen/_12sdp"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
                             android:src="@drawable/ic_copy_stt_second" />
 
                         <TextView
-                            android:layout_marginEnd="@dimen/_8sdp"
-                            android:textColor="@color/shine_black33"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/copy"/>
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:text="@string/copy"
+                            android:textColor="@color/shine_black33" />
                     </LinearLayout>
                 </FrameLayout>
+
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -336,27 +349,28 @@
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="@dimen/_52sdp"
                         android:layout_height="@dimen/_26sdp"
-                        android:backgroundTint="@color/grayF8"/>
+                        android:backgroundTint="@color/grayF8" />
 
 
                     <LinearLayout
-                        android:layout_gravity="center"
+                        android:id="@+id/saveSTTResult"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_marginHorizontal="@dimen/_3sdp"
                             android:layout_width="@dimen/_12sdp"
                             android:layout_height="@dimen/_12sdp"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
                             android:src="@drawable/ic_save_stt" />
 
                         <TextView
-                            android:layout_marginEnd="@dimen/_8sdp"
-                            android:textColor="@color/shine_black33"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/save"/>
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:text="@string/save"
+                            android:textColor="@color/shine_black33" />
                     </LinearLayout>
                 </FrameLayout>
 
@@ -365,13 +379,12 @@
 
             <ImageView
 
-                android:visibility="gone"
                 android:id="@+id/idealStateImg"
                 android:layout_width="@dimen/_160sdp"
                 android:layout_height="@dimen/_160sdp"
                 android:contentDescription="@null"
                 android:src="@drawable/bg_stt_ideal"
-                 />
+                android:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/RecordingStateImgs"

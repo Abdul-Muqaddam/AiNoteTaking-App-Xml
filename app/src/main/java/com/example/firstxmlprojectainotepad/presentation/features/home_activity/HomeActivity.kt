@@ -55,11 +55,14 @@ class HomeActivity : AppCompatActivity() {
             binding.bgToHideTheAddNoteFeatures.visibility = View.GONE
         }
         binding.iconAddNote.setOnClickListener {
-            val intent=Intent(this,Chat_Page_Activity::class.java)
-            startActivity(intent)
+            binding.featureToAddNote.visibility = View.VISIBLE
+            binding.bgToHideTheAddNoteFeatures.visibility = View.VISIBLE
         }
 
-
+        binding.AiChat.setOnClickListener {
+            val intent = Intent(this, Chat_Page_Activity::class.java)
+            startActivity(intent)
+        }
         binding.notesIconHomeBottom.setOnClickListener {
             viewPager2.currentItem = 0
         }

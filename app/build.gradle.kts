@@ -87,5 +87,6 @@ dependencies {
     implementation("io.insert-koin:koin-android:4.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+    implementation("com.airbnb.android:lottie:6.6.7")
 //    implementation("io.ktor:ktor-serialization-kotlinx-json:3.2.2")
 }
