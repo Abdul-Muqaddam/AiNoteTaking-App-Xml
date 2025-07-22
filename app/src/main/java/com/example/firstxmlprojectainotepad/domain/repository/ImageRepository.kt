@@ -1,8 +1,7 @@
-package com.example.firstxmlprojectainotepad.repository
+package com.example.firstxmlprojectainotepad.domain.repository
 
-import androidx.lifecycle.LiveData
-import com.example.firstxmlprojectainotepad.data.ImageDao
-import com.example.firstxmlprojectainotepad.data.ImageEntity
+import com.example.firstxmlprojectainotepad.data.DAO.ImageDao
+import com.example.firstxmlprojectainotepad.data.entities.ImageEntity
 import kotlinx.coroutines.flow.Flow
 
 class ImageRepository(private val imageDao: ImageDao) {

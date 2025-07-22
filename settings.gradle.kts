@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FirstXMLProjectAINotePad"
+rootProject.name = "AI NotePad"
 include(":app")
  

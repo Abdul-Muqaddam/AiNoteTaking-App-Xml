@@ -29,6 +29,7 @@
         />
 
         <LinearLayout
+            android:id="@+id/featureMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_20sdp"
@@ -48,6 +49,7 @@
                 android:paddingEnd="@dimen/_5sdp">
 
                 <LinearLayout
+                    android:id="@+id/ai_notes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -81,7 +83,6 @@
 
 
                         <ImageView
-                            android:id="@+id/ai_notes"
                             android:layout_width="@dimen/_18sdp"
                             android:layout_height="@dimen/_18sdp"
                             android:layout_gravity="center"
@@ -131,7 +132,6 @@
 
 
                         <ImageView
-                            android:id="@+id/Ai_chat"
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"
@@ -220,6 +220,15 @@
 
         </LinearLayout>
 
+        <FrameLayout
+            android:id="@+id/ad_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPager2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/featureMain" />
 
         <LinearLayout
             android:id="@+id/homeBottomBar"

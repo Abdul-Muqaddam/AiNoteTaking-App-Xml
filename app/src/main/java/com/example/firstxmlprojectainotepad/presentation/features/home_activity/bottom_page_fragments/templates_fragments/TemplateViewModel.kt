@@ -3,8 +3,8 @@ package com.example.firstxmlprojectainotepad.presentation.features.home_activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.firstxmlprojectainotepad.R
-import com.example.firstxmlprojectainotepad.data.ImageEntity
-import com.example.firstxmlprojectainotepad.repository.ImageRepository
+import com.example.firstxmlprojectainotepad.data.entities.ImageEntity
+import com.example.firstxmlprojectainotepad.domain.repository.ImageRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -31,9 +31,9 @@ class TemplateViewModel(
         _state.update { it.copy(color = color) }
     }
 
-    fun saveImage(path: String, title: String?) {
+    fun saveImage(path: String, noteId: Int) {
         viewModelScope.launch {
-            repository.insert(ImageEntity(imagePath = path, title = title))
+            repository.insert(ImageEntity(imagePath = path, noteOwnerId = noteId))
         }
     }
 

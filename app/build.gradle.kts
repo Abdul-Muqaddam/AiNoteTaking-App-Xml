@@ -64,8 +64,8 @@ dependencies {
     implementation(libs.ktorSerialization)
     implementation(libs.ktorNegotiation)
     implementation(libs.ktorAndroid)
-    implementation ("com.intuit.sdp:sdp-android:1.1.1")
-    implementation ("com.intuit.ssp:ssp-android:1.1.1")
+    implementation("com.intuit.sdp:sdp-android:1.1.1")
+    implementation("com.intuit.ssp:ssp-android:1.1.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.2")
     implementation("com.kizitonwose.calendar:view:2.7.0")
@@ -88,5 +88,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
     implementation("com.airbnb.android:lottie:6.6.7")
+    implementation("com.google.android.gms:play-services-ads:24.4.0")
 //    implementation("io.ktor:ktor-serialization-kotlinx-json:3.2.2")
 }

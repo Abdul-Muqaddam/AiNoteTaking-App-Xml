@@ -4,9 +4,9 @@ import com.example.firstxmlprojectainotepad.R
 
 val categoriesItem = listOf(
     R.string.all,
+    R.string.home,
     R.string.work,
-    R.string.office,
-    R.string.shopping
+
 )
 
 data class BottomSheetItem(val title: Int, val icon: Int)

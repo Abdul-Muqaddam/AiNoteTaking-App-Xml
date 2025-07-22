@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-            <item
-            android:id="@+id/work_edit"
-            android:title="@string/work" />
-        <item
-            android:id="@+id/office_edit"
-            android:title="@string/office" />
     <item
-        android:id="@+id/shopping_edit"
-        android:title="@string/shipping"/>
+        android:id="@+id/all_edit"
+        android:title="@string/all" />
+    <item
+        android:id="@+id/home_edit"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/work_edit"
+        android:title="@string/work" />
 
 </menu>

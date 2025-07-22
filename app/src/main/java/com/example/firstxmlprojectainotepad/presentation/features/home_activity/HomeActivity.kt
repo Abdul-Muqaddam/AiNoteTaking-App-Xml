@@ -23,9 +23,14 @@ import com.example.firstxmlprojectainotepad.presentation.features.Chat_Page.Chat
 import com.example.firstxmlprojectainotepad.presentation.features.Notes_Screen.Notes_Screen_Activity
 import com.example.firstxmlprojectainotepad.presentation.features.home_activity.adapter.BottomAdapter
 import com.example.firstxmlprojectainotepad.presentation.features.speech_to_text.SpeechToTextActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var adView: AdView
     private lateinit var binding: ActivityHomeBinding
     private lateinit var viewPager2: ViewPager2
     private lateinit var adapter: BottomAdapter
@@ -40,6 +45,23 @@ class HomeActivity : AppCompatActivity() {
         adapter = BottomAdapter(supportFragmentManager, lifecycle)
         viewPager2.adapter = adapter
 
+
+
+
+        // Initialize Mobile Ads SDK
+        MobileAds.initialize(this)
+
+        // Setup AdView
+        adView = AdView(this).apply {
+            adUnitId = "ca-app-pub-3940256099942544/9214589741" // Replace with your actual Ad Unit ID later
+            setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this@HomeActivity, 360))
+        }
+
+        val adContainer = binding.adViewContainer
+        adContainer.addView(adView)
+
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
 
 
 

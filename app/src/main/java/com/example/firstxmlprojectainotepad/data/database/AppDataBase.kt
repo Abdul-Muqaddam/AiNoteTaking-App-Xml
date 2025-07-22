@@ -1,12 +1,22 @@
-package com.example.firstxmlprojectainotepad.data
+package com.example.firstxmlprojectainotepad.data.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.firstxmlprojectainotepad.data.DAO.ImageDao
+import com.example.firstxmlprojectainotepad.data.DAO.NoteDao
+import com.example.firstxmlprojectainotepad.data.entities.ImageEntity
+import com.example.firstxmlprojectainotepad.data.entities.NoteEntity
 
-@Database(entities = [ImageEntity::class], version = 1, exportSchema = false)
+@Database(
+    entities = [NoteEntity::class, ImageEntity::class],
+    version = 2,
+    exportSchema = false
+)
 abstract class AppDatabase : RoomDatabase() {
+
+    abstract fun noteDao(): NoteDao
     abstract fun imageDao(): ImageDao
 
     companion object {
@@ -18,7 +28,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "image_database"
+                    "note_database"
                 ).build()
                 INSTANCE = instance
                 instance

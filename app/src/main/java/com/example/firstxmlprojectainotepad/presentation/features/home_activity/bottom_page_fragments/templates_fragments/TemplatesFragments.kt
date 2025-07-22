@@ -133,7 +133,7 @@ class TemplatesFragments : Fragment(
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.allImages.collect { imageList ->
                     val firstUri = imageList.firstOrNull()?.imagePath?.let { Uri.parse(it) }
-                    binding.imageView.setImageURI(firstUri)
+//                    binding.imageView.setImageURI(firstUri)
                 }
             }
         }
@@ -144,7 +144,7 @@ class TemplatesFragments : Fragment(
             uri?.let {
                 val savedImagePath =
                     saveImageToInternalStorage(context = requireContext(), uri = uri)
-                viewModel.saveImage(path = savedImagePath, title = null)
+                viewModel.saveImage(path = savedImagePath, noteId = -1)
             }
         }
 
